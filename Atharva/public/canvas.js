@@ -175,7 +175,7 @@
   // Socket wiring
   // ---------------------------------------------------------------------
   function connectSocket() {
-    socket = io();
+    socket = io("https://assignment-11-collaborative-whiteboard-bzun.onrender.com");
 
     socket.on("connect", () => {
       connectionDot.classList.remove("dot-offline");
@@ -329,3 +329,4 @@
     socket.emit("draw:undo", { boardId });
   });
 })();
+ 
